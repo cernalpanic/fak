@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<b>Song:</b>
+	<%= Song.find(@link.song_id).title %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @link.mediatype %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @link.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @link.end %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= link_to 'video', @link.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>

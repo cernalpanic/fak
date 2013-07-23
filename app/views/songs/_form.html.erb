@@ -1,0 +1,11 @@
+<%= simple_form_for(@song) do |f| %>
+	<%= f.error_notification %>
+
+		<%= f.input :title %>
+
+		<%= f.association :album %>
+
+	<div class="form-actions">
+		<%= f.button :submit %>
+	</div>
+<% end %>

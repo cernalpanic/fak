@@ -1,0 +1,15 @@
+<%= simple_form_for(@link) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+		<%= f.association :song %>
+    <%= f.input :mediatype, collection: @types %>
+    <%= f.input :start %>
+    <%= f.input :end %>
+    <%= f.input :url %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

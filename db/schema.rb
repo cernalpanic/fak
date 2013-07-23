@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723005805) do
+ActiveRecord::Schema.define(:version => 20130723031710) do
+
+  create_table "albums", :force => true do |t|
+    t.string   "title"
+    t.integer  "year"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "bands", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "mediatype"
+    t.string   "start"
+    t.string   "end"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "song_id"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -23,6 +46,22 @@ ActiveRecord::Schema.define(:version => 20130723005805) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "shows", :force => true do |t|
+    t.date     "date"
+    t.text     "description"
+    t.text     "img"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "digit"
+  end
+
+  create_table "songs", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "album_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -49,5 +88,15 @@ ActiveRecord::Schema.define(:version => 20130723005805) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
+
+  create_table "venues", :force => true do |t|
+    t.string   "city"
+    t.string   "name"
+    t.string   "state"
+    t.string   "country"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end
