@@ -19,10 +19,18 @@
 		<%venue = Venue.find(show.venue_id) %>
 		<tr>
     <td><%= link_to show.date, show %></td>
-    <td><%= venue.name %></td>
-    <td><%= venue.city %></td>
-    <td><%= venue.state %></td>
-    <td><%= venue.country %></td>
+		<td>
+			<%= venue.name || 'not entered' %>
+		</td>
+		<td>
+			<%= venue.city || 'not entered'%>
+		</td>
+		<td>
+			<%= venue.state || 'not entered'%>
+		</td>
+		<td>
+			<%= venue.country || 'not entered' %>
+		</td>
     <td><%= show.description %></td>
     <td><%= show.songs.length %></td>
     <td><%= link_to 'Show', show %></td>
