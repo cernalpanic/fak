@@ -16,21 +16,28 @@
 		</tr>
 	</thead>
 	<% @shows.each do |show| %>
-		<% venue = Venue.find(show.venue_id) || 'none' %>
+		<% venue = Venue.find_by_id(show.venue_id) %>
 		<tr>
     <td><%= link_to show.date, show %></td>
+		<% if !venue.nil? %>
 		<td>
-			<%= venue.name || 'not entered' %>
+			<%= venue.name %>
 		</td>
 		<td>
-			<%= venue.city || 'not entered'%>
+			<%= venue.city %>
 		</td>
 		<td>
-			<%= venue.state || 'not entered'%>
+			<%= venue.state %>
 		</td>
 		<td>
-			<%= venue.country || 'not entered' %>
+			<%= venue.country %>
 		</td>
+		<% else %>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		<% end %>
     <td><%= show.description %></td>
     <td><%= show.songs.length %></td>
     <td><%= link_to 'Show', show %></td>
