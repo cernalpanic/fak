@@ -3,18 +3,27 @@
 <table>
   <tr>
     <th>Date</th>
+    <th>Venue</th>
+    <th>City</th>
+    <th>St/Prv</th>
+    <th>Country</th>
     <th>Description</th>
-    <th>Img</th>
+		<th>Songs</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @shows.each do |show| %>
-  <tr>
+	<% @shows.each do |show| %>
+		<%venue = Venue.find(show.venue_id) %>
+		<tr>
     <td><%= show.date %></td>
+    <td><%= venue.name %></td>
+    <td><%= venue.city %></td>
+    <td><%= venue.state %></td>
+    <td><%= venue.country %></td>
     <td><%= show.description %></td>
-    <td><%= show.img %></td>
+    <td><%= show.songs.length %></td>
     <td><%= link_to 'Show', show %></td>
     <td><%= link_to 'Edit', edit_show_path(show) %></td>
     <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
