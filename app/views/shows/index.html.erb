@@ -16,7 +16,7 @@
 		</tr>
 	</thead>
 	<% @shows.each do |show| %>
-		<%venue = Venue.find(show.venue_id) %>
+		<% venue = Venue.find(show.venue_id) || 'none' %>
 		<tr>
     <td><%= link_to show.date, show %></td>
 		<td>
