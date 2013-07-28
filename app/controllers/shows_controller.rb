@@ -3,6 +3,7 @@ class ShowsController < ApplicationController
   # GET /shows.json
   def index
     @shows = Show.all
+		#TODO eager_load venues here.
 
     respond_to do |format|
       format.html # index.html.erb

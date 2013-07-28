@@ -1,8 +1,8 @@
 FAK::Application.routes.draw do
+  resources :artists
+
+
   resources :links
-
-
-  resources :bands
 
 
   resources :shows

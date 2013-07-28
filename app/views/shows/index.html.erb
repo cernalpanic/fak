@@ -1,5 +1,3 @@
-<h1>Listing shows</h1>
-
 <table class="datatable table">
 	<thead>
 		<tr>
@@ -18,33 +16,33 @@
 	<% @shows.each do |show| %>
 		<% venue = Venue.find_by_id(show.venue_id) %>
 		<tr>
-    <td><%= link_to show.date, show %></td>
-		<% if !venue.nil? %>
-		<td>
-			<%= venue.name %>
-		</td>
-		<td>
-			<%= venue.city %>
-		</td>
-		<td>
-			<%= venue.state %>
-		</td>
-		<td>
-			<%= venue.country %>
-		</td>
-		<% else %>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		<% end %>
-    <td><%= show.description %></td>
-    <td><%= show.songs.length %></td>
-    <td><%= link_to 'Show', show %></td>
-    <td><%= link_to 'Edit', edit_show_path(show) %></td>
-    <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+			<td><%= link_to show.date, show %></td>
+			<% if !venue.nil? %>
+				<td>
+					<%= venue.name %>
+				</td>
+				<td>
+					<%= venue.city %>
+				</td>
+				<td>
+					<%= venue.state %>
+				</td>
+				<td>
+					<%= venue.country %>
+				</td>
+			<% else %>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			<% end %>
+			<td><%= show.description %></td>
+			<td><%= show.songs.length %></td>
+			<td><%= link_to 'Show', show %></td>
+			<td><%= link_to 'Edit', edit_show_path(show) %></td>
+			<td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
 </table>
 
 <br />
