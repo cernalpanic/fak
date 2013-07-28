@@ -3,4 +3,6 @@ class Link < ActiveRecord::Base
 
   belongs_to :song
 
+	validates :url, :presence => {:message => 'Url cannot be blank, Link not saved'}
+
 end

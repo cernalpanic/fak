@@ -3,5 +3,7 @@ class Show < ActiveRecord::Base
         
   belongs_to :venue
   has_many :songs
+  has_many :artists
 
+	validates :date, :presence => {:message => 'Date cannot be blank, Show not saved; even a close but wrong date is better than no date. We can always edit it later.'}
 end
