@@ -16,7 +16,7 @@
 	<% @shows.each do |show| %>
 		<% venue = Venue.find_by_id(show.venue_id)  %>
 		<tr>
-			<td><%= link_to show.date, show %></td>
+			<td><%= link_to show.date, show, :class => 'btn' %></td>
 				<td>
 					<%= venue.name rescue '' %>
 				</td>
