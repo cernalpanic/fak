@@ -14,33 +14,31 @@
 		</tr>
 	</thead>
 	<% @shows.each do |show| %>
-		<% venue = Venue.find_by_id(show.venue_id) %>
+		<% venue = Venue.find_by_id(show.venue_id)  %>
 		<tr>
 			<td><%= link_to show.date, show %></td>
-			<% if !venue.nil? %>
 				<td>
-					<%= venue.name %>
+					<%= venue.name rescue '' %>
 				</td>
 				<td>
-					<%= venue.city %>
+					<%= venue.city rescue '' %>
 				</td>
 				<td>
-					<%= venue.state %>
+					<%= venue.state rescue '' %>
 				</td>
 				<td>
-					<%= venue.country %>
+					<%= venue.country rescue '' %>
 				</td>
-			<% else %>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			<% end %>
+	
 			<td><%= show.description %></td>
 			<td><%= show.songs.length %></td>
 			<td><%= link_to 'Show', show %></td>
 			<td><%= link_to 'Edit', edit_show_path(show) %></td>
-			<td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td>
+				<% if can? :manage, show %>
+					<%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %>
+				<% end%>
+			</td>
 		</tr>
 	<% end %>
 </table>

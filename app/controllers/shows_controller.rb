@@ -73,6 +73,7 @@ class ShowsController < ApplicationController
   # DELETE /shows/1
   # DELETE /shows/1.json
   def destroy
+    authorize! :destroy, user, :message => 'Not authorized as an administrator.'
     @show = Show.find(params[:id])
     @show.destroy
 

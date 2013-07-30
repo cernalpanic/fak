@@ -11,6 +11,7 @@ group :assets do
 	gem 'coffee-rails', '~> 3.2.1'
 	gem 'uglifier', '>= 1.0.3'
 end
+
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'cancan'
@@ -20,6 +21,7 @@ gem 'rolify'
 gem 'simple_form'
 gem 'country_select'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
