@@ -1,4 +1,7 @@
 FAK::Application.routes.draw do
+  resources :presses
+
+
   resources :artists
 
 

@@ -3,6 +3,6 @@ class Album < ActiveRecord::Base
 
   has_many :songs
 
-	validates :title, :presence => {:message => 'Title cannot be blank, Album not saved'}
+  validates :title, :presence => {:message => 'Title cannot be blank, Album not saved'}
 
 end
