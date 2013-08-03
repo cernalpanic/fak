@@ -12,7 +12,7 @@
 
 <% @presses.each do |press| %>
   <tr>
-    <td><%= press.url %></td>
+    <td><%= link_to press.url %></td>
     <td><%= press.blurb %></td>
     <td><%= press.show_id %></td>
     <td><%= link_to 'Show', press %></td>
