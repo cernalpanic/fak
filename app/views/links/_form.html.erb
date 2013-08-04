@@ -2,7 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-		<%= f.association :song %>
+	<%= f.association :song %>
+	<%= f.association :show, :label_method => lambda { |show| "#{show.date} - <br> #{Venue.find(show.venue_id).name}".html_safe } %>
+
     <%= f.input :mediatype, collection: @types %>
     <%= f.input :start %>
     <%= f.input :end %>
