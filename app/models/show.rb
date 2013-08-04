@@ -3,6 +3,7 @@ class Show < ActiveRecord::Base
         
   belongs_to :venue
   has_many :songs
+  has_many :links
   has_many :artists
   has_many :presses
 

@@ -2,8 +2,8 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
   def index
+	Show.includes( :links, :songs, :artists, :presses )
     @shows = Show.all
-		#TODO eager_load venues here.
 
     respond_to do |format|
       format.html # index.html.erb

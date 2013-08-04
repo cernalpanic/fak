@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
 
 	belongs_to :album
 	belongs_to :show
-	belongs_to :artis
+	belongs_to :artist
 	has_many :links
 
 	validates_uniqueness_of :title, :case_sensitive => false

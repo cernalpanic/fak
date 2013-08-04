@@ -7,7 +7,7 @@
 			<th>St/Prv</th>
 			<th>Country</th>
 			<th>Description</th>
-			<th>Songs</th>
+			<th>Links</th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -31,8 +31,8 @@
 				</td>
 	
 			<td><%= show.description %></td>
-			<td><%= show.songs.length %></td>
-			<td><%= link_to 'Show', show %></td>
+			<td><%= show.links.length %></td>
+			<td><%= link_to 'Links', show %></td>
 			<td><%= link_to 'Edit', edit_show_path(show) %></td>
 			<td>
 				<% if can? :manage, show %>
