@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
-  <b>Date:</b>
-  <%= @show.date %>
-
-  <b>Description:</b>
-  <%= @show.description %>
-
-  <b>Img:</b>
-  <%= @show.img %>
+<div class="row">
+<%= @show.date %>
+<%= @show.description %>
+<%= @show.artists %>
+<%= @show.presses %>
+<%= @show.links %>
+<%= @show.songs %>
+</div>
 
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>

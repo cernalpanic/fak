@@ -1,9 +1,9 @@
 class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
-  def index
-	Show.includes( :links, :songs, :artists, :presses )
-    @shows = Show.all
+	def index
+		Show.includes( :links, :songs, :artists, :presses, :venues )
+		@shows = Show.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,7 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
+		Show.includes( :links, :songs, :artists, :presses, :venues )
     @show = Show.find(params[:id])
 
     respond_to do |format|

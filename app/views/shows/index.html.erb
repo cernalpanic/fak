@@ -4,45 +4,21 @@
 			<th>Date</th>
 			<th>Venue</th>
 			<th>City</th>
-			<th>St/Prv</th>
 			<th>Country</th>
-			<th>Description</th>
 			<th>Links</th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<th>Edit</th>
 		</tr>
 	</thead>
 	<% @shows.each do |show| %>
-		<% venue = Venue.find_by_id(show.venue_id)  %>
 		<tr>
-			<td><%= link_to show.date, show, :class => 'btn' %></td>
-				<td>
-					<%= venue.name rescue '' %>
-				</td>
-				<td>
-					<%= venue.city rescue '' %>
-				</td>
-				<td>
-					<%= venue.state rescue '' %>
-				</td>
-				<td>
-					<%= venue.country rescue '' %>
-				</td>
-	
-			<td><%= show.description %></td>
-			<td><%= show.links.length %></td>
-			<td><%= link_to 'Links', show %></td>
+			<td><%= link_to show.date, show %></td>
+			<td><%= show.venue.name rescue '' %></td>
+			<td><%= show.venue.city rescue '' %></td>
+			<td><%= show.venue.country rescue '' %></td>
+			<td><%= show.links.length rescue '' %></td>
 			<td><%= link_to 'Edit', edit_show_path(show) %></td>
-			<td>
-				<% if can? :manage, show %>
-					<%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %>
-				<% end%>
-			</td>
+			<td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Show', new_show_path %>
+<%= link_to 'New Show', new_show_path, :class => 'btn' %>
