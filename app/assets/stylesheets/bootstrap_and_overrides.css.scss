@@ -1,3 +1,19 @@
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+body {
+	background-color: #005b99 !important;
+
+	.navbar-inner {
+		min-height: 71px;
+		background-image: none;
+		background-color: #fcd116;
+		.nav li > a {
+			color: #005b99;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+	}
+}
+
+}
+
