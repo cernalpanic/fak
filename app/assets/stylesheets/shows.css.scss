@@ -1,3 +1,14 @@
-// Place all the styles related to the shows controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.content {
+  background-color: #005b99 !important;
+  box-shadow: none;
+  .ticket-container {
+    background-image: url("/assets/ticket.png");
+    background-repeat: no-repeat;
+    height: 222px;
+    box-shadow: 2px -1px 64px black;
+    padding-top: 28px;
+    background-position: -10px -35px;
+    width: 778px;
+    border-radius: 2px;
+  }
+}

@@ -1,4 +1,14 @@
 class ShowsController < ApplicationController
+  def ticket 	
+    Show.includes( :links, :songs, :artists, :presses, :venues )
+		@shows = Show.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @shows }
+    end
+  end
+
   # GET /shows
   # GET /shows.json
 	def index

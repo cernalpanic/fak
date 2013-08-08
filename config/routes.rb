@@ -7,9 +7,8 @@ FAK::Application.routes.draw do
 
   resources :links
 
-
   resources :shows
-
+  get 'ticket', to: 'shows#ticket'
 
   resources :venues
 
