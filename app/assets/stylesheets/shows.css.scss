@@ -4,11 +4,45 @@
   .ticket-container {
     background-image: url("/assets/ticket.png");
     background-repeat: no-repeat;
-    height: 222px;
-    box-shadow: 2px -1px 64px black;
+    height: 276px;
     padding-top: 28px;
-    background-position: -10px -35px;
-    width: 778px;
+    background-position: -5px -5px;
+    width: 787px;
     border-radius: 2px;
+    position: relative;
+    margin-top: 33px;
+    .city {
+      position: absolute;
+      text-align: center;
+      width: 412px;
+      left: 124px;
+      top: 55px;
+      font-size: 1em;
+      color: rgba(41, 43, 66, 0.76);
+      font-weight: bold;
+      height: 1em;
+     }
+    .venue {
+      position: absolute;
+      text-align: center;
+      width: 412px;
+      left: 124px;
+      top: 24px;
+      font-size: 2.1em;
+      color: rgba(41, 43, 66, 0.76);
+      font-weight: bold;
+      height: 1em;
+     }
+    .band-name {
+      position: absolute;
+      text-align: center;
+      width: 303px;
+      left: 238px;
+      top: 193px;
+      font-size: 2em;
+      color: rgba(41, 43, 66, 0.76);
+      font-weight: bold;
+      height: 1em;
   }
+}
 }

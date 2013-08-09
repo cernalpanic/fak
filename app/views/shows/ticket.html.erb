@@ -1,5 +1,14 @@
-<div class="row">
-  <div class="span9 offset2 ticket-container">
-    wha
-  </div>
-</div>
+	<% @shows.each do |show| %>
+    <div class="row">
+      <div class="span9 offset2 ticket-container">
+        <div class="details">
+          <div class="venue"><%= show.venue.name.upcase rescue '' %></div>
+          <div class="city"><%= show.venue.city rescue '' %>, <%= show.venue.country rescue '' %></div>
+          <div class="band-name">First Aid Kit</div>
+        </div>
+      </div>
+    </div>
+			<%= link_to show.date, show %>
+			<%= show.links.length rescue '' %>
+	<% end %>
+
