@@ -2,6 +2,7 @@ class ShowsController < ApplicationController
   def ticket 	
     Show.includes( :links, :songs, :artists, :presses, :venues )
 		@shows = Show.all
+    @noshowmenu = true; #don't render the menu
 
     respond_to do |format|
       format.html # index.html.erb
