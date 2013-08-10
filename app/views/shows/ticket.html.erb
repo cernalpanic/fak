@@ -5,6 +5,9 @@
           <div class="venue"><%= show.venue.name.upcase rescue '' %></div>
           <div class="city"><%= show.venue.city rescue '' %>, <%= show.venue.country rescue '' %></div>
           <div class="band-name">First Aid Kit</div>
+          <div class="date-month"><%= show.date.strftime("%b").upcase %></div>
+          <div class="date-day"><%= show.date.strftime("%d").upcase %></div>
+          <div class="date-year"><%= show.date.strftime("%Y").upcase %></div>
         </div>
       </div>
     </div>
