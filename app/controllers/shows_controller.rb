@@ -1,7 +1,7 @@
 class ShowsController < ApplicationController
   def ticket 	
     Show.includes( :links, :songs, :artists, :presses, :venues )
-		@shows = Show.all
+		@shows = Show.all.sort_by &:date
     @noshowmenu = true; #don't render the menu
 
     respond_to do |format|
