@@ -16,22 +16,20 @@
       text-align: center;
       width: 412px;
       left: 124px;
-      top: 55px;
+      top: 62px;
       font-size: 1em;
       color: rgba(41, 43, 66, 0.76);
       font-weight: bold;
-      height: 1em;
- }
- .venue {
-   position: absolute;
-   text-align: center;
-   width: 412px;
-   left: 124px;
-   top: 24px;
-   font-size: 2.1em;
-   color: rgba(41, 43, 66, 0.76);
-   font-weight: bold;
-   height: 1em;
+   }
+   .venue {
+     position: absolute;
+     text-align: center;
+     width: 412px;
+     left: 124px;
+     top: 21px;
+     font-size: 1.5em;
+     color: rgba(41, 43, 66, 0.76);
+     font-weight: bold;
  }
  .band-name {
    position: absolute;
@@ -42,7 +40,6 @@
    font-size: 2em;
    color: rgba(41, 43, 66, 0.76);
    font-weight: bold;
-   height: 1em;
 }
 .date-month {     
   position: absolute;
@@ -53,7 +50,6 @@
   font-size: 3.3em;
   color: rgba(41, 43, 66, 0.76);
   font-weight: bold;
-  height: 1em;
 }
 .date-day {     
   position: absolute;
@@ -64,7 +60,6 @@
   font-size: 5em;
   color: rgba(41, 43, 66, 0.76);
   font-weight: bold;
-  height: 1em;
  }
  .date-year {     
    position: absolute;
@@ -75,8 +70,7 @@
    font-size: 2.2em;
    color: rgba(41, 43, 66, 0.76);
    font-weight: bold;
-   height: 1em;
-  }
+}
 
 }
 }
