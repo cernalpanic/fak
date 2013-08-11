@@ -4,7 +4,9 @@
 <%= @show.description %>
 <%= @show.artists %>
 <%= @show.presses %>
-<%= @show.links %>
+<% @show.links.each do |link| %>
+  <%= link_to link.url, link.url %>
+<% end %>
 <%= @show.songs %>
 </div>
 

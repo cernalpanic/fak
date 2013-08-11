@@ -31,6 +31,27 @@
        color: rgba(41, 43, 66, 0.76);
        font-weight: bold;
       }
+     .video-link {
+       position: absolute;
+       text-align: center;
+       width: 131px;
+       left: 320px;
+       top: 93px;
+       font-size: 1em;
+       color: rgba(41, 43, 66, 0.76);
+       font-weight: bold;
+       a {
+         color: darkred;
+         border: 1px solid darkred;
+         border-radius: 4px;
+         padding: 2px;
+         &:hover {
+           background-color: orange;
+           text-decoration: none;
+         }
+       }
+      }
+
    .venue {
      position: absolute;
      text-align: center;

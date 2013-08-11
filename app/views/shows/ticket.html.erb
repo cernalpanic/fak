@@ -8,7 +8,8 @@
           <div class="date-month"><%= show.date.strftime("%b").upcase rescue '' %></div>
           <div class="date-day"><%= show.date.strftime("%d").upcase rescue '' %></div>
           <div class="date-year"><%= show.date.strftime("%Y").upcase rescue '' %></div>
-          <div class="link-count">LINK COUNT: <%= show.links.length rescue '' %> </div>
+          <div class="link-count">COUNT: <%= show.links.length rescue '' %> </div>
+          <div class="video-link"><%= link_to "VIDEOS", show  %> </div>
 
         </div>
       </div>
