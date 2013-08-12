@@ -5,7 +5,10 @@
 <%= @show.artists %>
 <%= @show.presses %>
 <% @show.links.each do |link| %>
-  <%= link_to link.url, link.url %>
+  <iframe width="560" height="315" src="<%= link.url.insert(23, 'embed/').sub('watch?v=', '') %>" frameborder="0" allowfullscreen></iframe>
+  <br>
+  <hr>
+  <br>
 <% end %>
 <%= @show.songs %>
 </div>

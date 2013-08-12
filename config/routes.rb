@@ -1,9 +1,7 @@
 FAK::Application.routes.draw do
   resources :presses
 
-
   resources :artists
-
 
   resources :links
 
@@ -20,9 +18,9 @@ FAK::Application.routes.draw do
 
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'shows#ticket'
   end
-  root :to => "shows#index"
+  root :to => "shows#ticket"
   devise_for :users
   resources :users
 end
