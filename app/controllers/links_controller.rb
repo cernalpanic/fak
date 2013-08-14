@@ -25,6 +25,7 @@ class LinksController < ApplicationController
   # GET /links/new.json
   def new
     @link = Link.new
+    @venue = Venue.new
 		@types = ['video', 'audio', 'image']
     respond_to do |format|
       format.html # new.html.erb

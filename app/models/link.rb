@@ -6,4 +6,7 @@ class Link < ActiveRecord::Base
 
   validates :url, :presence => {:message => 'Url cannot be blank, Link not saved'}
 
+  validates_uniqueness_of :url,
+                          :message=> "This link is already in the db."
+
 end
