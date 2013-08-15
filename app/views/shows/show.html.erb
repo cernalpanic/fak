@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-<%= @show.date %>
-<%= @show.description %>
-<%= @show.artists %>
-<%= @show.presses %>
 <% @show.links.each do |link| %>
+  <h1><%= link.title %></h1>
   <iframe width="560" height="315" src="<%= link.url.insert(23, 'embed/').sub('watch?v=', '') %>" frameborder="0" allowfullscreen></iframe>
   <br>
   <hr>

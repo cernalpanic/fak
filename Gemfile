@@ -21,6 +21,7 @@ gem 'rolify'
 gem 'simple_form'
 gem 'country_select'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+gem 'will_paginate', '~> 3.0'
 
 group :development do
 	gem 'better_errors'
