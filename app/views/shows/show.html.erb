@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 <% @show.links.each do |link| %>
-  <h1><%= link.title %></h1>
-  <iframe width="560" height="315" src="<%= link.url.insert(23, 'embed/').sub('watch?v=', '') %>" frameborder="0" allowfullscreen></iframe>
+  <div class="row">
+    <div class="span6">
+      <iframe width="560" height="315" src="<%= link.url.insert(23, 'embed/').sub('watch?v=', '') %>" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="span6">
+      <h2><%= link.song %></h1>
+    </div>
+  </div>
   <br>
   <hr>
   <br>
