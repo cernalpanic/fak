@@ -10,12 +10,13 @@ class Show < ActiveRecord::Base
 	validates :date, :presence => {:message => 'Date cannot be blank, Show not saved; even a close but wrong date is better than no date. We can always edit it later.'}
 
   def self.twitter 
-		#TODO where do i put this?
+		#TODO where do i put this? 
+		#application.yml but wire up heroku somehow
 		Twitter.configure do |config|
-			config.consumer_key = CONFIG[:consumer_key]
-			config.consumer_secret = CONFIG[:consumer_secret]
-			config.oauth_token = CONFIG[:oauth_token]
-			config.oauth_token_secret = CONFIG[:oauth_token_secret]
+			config.consumer_key = "G4KmE5LHdXcIxHbrD6RmQ" 
+			config.consumer_secret = "x8PIPsFup1ilxM5CWhUMnP63mMBxVrlGoDWVw1Q"
+			config.oauth_token = "16470076-cC0dVrv1DvrPOEcSjDCmHoiUk9S1pqj1vqANoApSw"   
+			config.oauth_token_secret = "VTMVIPClGJ6ZcqeMpxbIXtOBIfLVXJ5jy8PlCFyqmO0" 
 		end
 
     Twitter.search('@firstaidkitband')
