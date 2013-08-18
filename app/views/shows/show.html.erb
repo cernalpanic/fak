@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+
 <div class="row">
 <% @show.links.each do |link| %>
   <div class="row">
@@ -16,5 +17,6 @@
 <%= @show.songs %>
 </div>
 
+<%= render 'twitter' %>
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>

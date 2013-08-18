@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+
   def ticket 	
     Show.includes( :links, :songs, :artists, :presses, :venues )
 		@shows = (Show.all.sort_by &:date).reverse 
