@@ -4,10 +4,10 @@ body { padding-top: 60px; }
 
 body {
 	background-color: #005b99 !important;
+  background-image: url('/assets/ship.jpg');
   background-size: 100%;
 
 	.navbar-inner {
-		min-height: 71px;
 		background-image: none;
 		background-color: #fcd116;
 		.nav li > a {
