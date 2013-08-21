@@ -1,8 +1,9 @@
 <h1>Listing songs</h1>
 
-<table>
+<table class="table datatable">
   <tr>
     <th>Title</th>
+    <th>Links</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
 <% @songs.each do |song| %>
   <tr>
     <td><%= song.title %></td>
+    <td><%= song.links.count %></td>
     <td><%= link_to 'Show', song %></td>
     <td><%= link_to 'Edit', edit_song_path(song) %></td>
     <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,6 +1,9 @@
 .content {
   background-color: transparent !important;
   box-shadow: none;
+  .table {
+    background-color: white;
+  }
   .ticket-container {
     background-image: url("/assets/ticket.png");
     background-repeat: no-repeat;
