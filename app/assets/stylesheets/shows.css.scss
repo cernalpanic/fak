@@ -105,6 +105,40 @@
    color: rgba(41, 43, 66, 0.76);
    font-weight: bold;
 }
+  .add-link-btn {
+    position: absolute;
+    text-align: center;
+    width: 86px;
+    left: 675px;
+    top: 269px;
+    border: 2px solid;
+    border-radius: 7px;
+    font-weight: bold;
+    box-shadow: 0px 0px 6px black;
+    background-color: #9EADAC;
+    opacity: .4;
+    cursor: pointer;
+  }
+  .add-link-container {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 587px;
+    width: 169px;
+    top: -25px;
+    height: 263px;
+    padding: 11px;
+    text-align: center;
+    border-radius: 9px;
+    .date {
+      width: 160px;
+      float: left;
+      display: inline;
+    }
+    .select, .url {
+      width: 160px;
+    }
+  }
 }
 
 .twitter {

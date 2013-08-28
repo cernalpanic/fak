@@ -1,0 +1,7 @@
+<%= simple_form_for(link, :url => "links", :method => :post ) do |f| %>
+  <%= f.error_notification %>
+    <%= f.association :song, label: 'select song' %>
+    <%= f.input :url %>
+    <%= f.hidden_field :show_id, :value => show.id %>
+    <%= f.button :submit %>
+<% end %>

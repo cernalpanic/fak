@@ -10,7 +10,12 @@
           <div class="date-year"><%= show.date.strftime("%Y").upcase rescue '' %></div>
           <div class="link-count">COUNT: <%= show.links.length rescue '' %> </div>
           <div class="video-link"><%= link_to "VIDEOS", show  %> </div>
-
+          <div class="add-link-btn">
+            + add link
+          </div>
+          <div class="add-link-container">
+            <%= render 'form-ticket',  :link => Link.new, :show => show %>
+          </div>
         </div>
       </div>
     </div>

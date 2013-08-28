@@ -4,4 +4,16 @@ $(document).ready(function () {
 	  "sPaginationType": "bootstrap",
     "bRetrieve": true
 	});
+
+  $('.add-link-btn').hover( 
+    function() {
+      $(this).animate({'opacity': 1}, 500);
+    },
+    function() {
+      $(this).animate({'opacity': .4}, 500);
+    }
+    );
+   $('.add-link-btn').click(function () {
+    $(this).next().animate({'top': 11}, 400).animate({'opacity': 1}, 400);
+   });
 });
