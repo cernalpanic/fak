@@ -45,11 +45,15 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
+        @saved = true
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
         format.json { render json: @link, status: :created, location: @link }
+        format.js #our ajax js template in views/links/create.js
       else
+        @saved = false
         format.html { render action: "new" }
         format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.js #our ajax js template in views/links/create.js
       end
     end
   end

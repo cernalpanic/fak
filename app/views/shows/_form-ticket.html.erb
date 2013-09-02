@@ -1,4 +1,4 @@
-<%= simple_form_for(link, :url => "links", :method => :post ) do |f| %>
+<%= simple_form_for(link, :url => "links", :method => :post, id: "new_show", remote: true ) do |f| %>
   <%= f.error_notification %>
     <%= f.association :song, label: 'select song' %>
     <%= f.input :url %>
