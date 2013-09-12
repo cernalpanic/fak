@@ -2,8 +2,8 @@
     <div class="row">
       <div class="span9 offset2 ticket-container">
         <div class="details">
-          <div class="venue"><%= show.venue.name.upcase rescue '' %></div>
-          <div class="city"><%= show.venue.city rescue '' %>, <%= show.venue.country rescue '' %></div>
+          <div class="venue"><%= show.venue.upcase rescue '' %></div>
+          <div class="city"><%= show.city rescue '' %>, <%= show.country rescue '' %></div>
           <div class="band-name">First Aid Kit</div>
           <div class="date-month"><%= show.date.strftime("%b").upcase rescue '' %></div>
           <div class="date-day"><%= show.date.strftime("%d").upcase rescue '' %></div>
