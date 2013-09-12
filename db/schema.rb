@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806005725) do
+ActiveRecord::Schema.define(:version => 20130912014847) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -64,7 +64,9 @@ ActiveRecord::Schema.define(:version => 20130806005725) do
     t.text     "img"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "venue_id"
+    t.string   "city"
+    t.string   "country"
+    t.string   "venue"
   end
 
   create_table "songs", :force => true do |t|
@@ -100,15 +102,5 @@ ActiveRecord::Schema.define(:version => 20130806005725) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
-
-  create_table "venues", :force => true do |t|
-    t.string   "city"
-    t.string   "name"
-    t.string   "state"
-    t.string   "country"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
 
 end

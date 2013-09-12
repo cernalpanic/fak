@@ -1,7 +1,7 @@
 class ShowsController < ApplicationController
 
   def ticket 	
-    Show.includes( :links, :songs, :artists, :presses, :venues )
+    Show.includes( :links, :songs, :artists, :presses )
 		@shows = (Show.all.sort_by &:date).reverse 
     @noshowmenu = true; #don't render the menu
 
@@ -14,7 +14,7 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
 	def index
-		Show.includes( :links, :songs, :artists, :presses, :venues )
+		Show.includes( :links, :songs, :artists, :presses )
 		@shows = Show.all
 
     respond_to do |format|
@@ -26,7 +26,7 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
-		Show.includes( :links, :songs, :artists, :presses, :venues )
+		Show.includes( :links, :songs, :artists, :presses )
     @show = Show.find(params[:id])
 
     respond_to do |format|
