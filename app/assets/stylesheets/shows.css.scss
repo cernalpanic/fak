@@ -1,4 +1,27 @@
 .content {
+  .content-bg {
+    background-color: rgb(93, 94, 91);
+    padding: 20px;
+    color: white;
+  }
+  position: relative;
+ ul.user-menu {
+   background-color: lightblue;
+   display: inline-block;
+   padding: 5px;
+   position: absolute;
+   left: -48px;
+   top: -23px;
+    list-style: none;
+    li {
+      display: inline;
+      padding-left: 10px;
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
+
   background-color: transparent !important;
   box-shadow: none;
   .table {
@@ -139,7 +162,7 @@
       width: 160px;
     }
   }
-}
+ }
 
 .twitter {
   background-color: white;

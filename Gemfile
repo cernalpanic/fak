@@ -10,6 +10,7 @@ group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
 	gem 'coffee-rails', '~> 3.2.1'
 	gem 'uglifier', '>= 1.0.3'
+  gem 'thin'
 end
 
 gem 'jquery-rails'
@@ -22,13 +23,13 @@ gem 'simple_form'
 gem 'country_select'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'twitter'
+gem "haml-rails"
 
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
 	gem 'hub', :require=>nil
 	gem 'quiet_assets'
-
 end
 
 group :development, :test do

@@ -1,0 +1,45 @@
+%ul.user-menu
+  - if user_signed_in?
+    %li 
+      = link_to 'Edit Profile', edit_user_registration_path(current_user.id)
+    %li 
+      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+    %li
+      = link_to '+ Add Show', new_show_path
+  - else
+    %li
+      = link_to 'Register', new_user_registration_path
+    %li
+      = link_to 'Login', user_session_path
+  - if current_user 
+    - if current_user.has_role? :admin
+      %li 
+        = link_to 'admin', users_path
+
+- @shows.each do |show|
+  .row
+    .span9.offset2.ticket-container
+      .details
+        .venue
+          = show.venue.upcase rescue ''
+        .city 
+          = show.city rescue '' 
+          ,
+          = show.country rescue '' 
+        .band-name 
+          First Aid Kit
+        .date-month 
+          = show.date.strftime("%b").upcase rescue ''
+        .date-day 
+          = show.date.strftime("%d").upcase rescue ''
+        .date-year 
+          = show.date.strftime("%Y").upcase rescue ''
+        .link-count 
+          = show.links.length rescue ''
+        .video-link 
+          = link_to "VIDEOS", show 
+        .add-link-btn
+          - if user_signed_in?
+            + add link
+        .add-link-container
+          = render 'form-ticket',  :link => Link.new, :show => show
