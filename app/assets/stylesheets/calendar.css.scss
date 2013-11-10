@@ -1,0 +1,75 @@
+html {
+  background-color: rgba(35,83,138,1);
+
+  body {
+
+    height: 100%;
+
+    padding-top: 40px;
+
+    .container {
+      h2 {
+        color: grey;
+        font-size: 1.2em;
+      }
+
+      box-shadow: 0px 0px 46px black;
+      padding: 25px 10px 10px 10px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    .datetimepicker {
+      z-index: 1041 !important;
+    }
+
+    #calendar {
+      .fc-widget-content {
+        border: 1px solid rgb(252, 252, 252);
+      }
+      
+      .fc-state-highlight {
+        background-color: #C0D9F5;
+      } 
+
+      .fc-day:hover {
+        background-color: #FCFCFC;
+      } 
+
+      .new-event-button:hover {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+      }
+
+      .fc-event {
+        color: #F8F8F8;
+        font-size: 1em;
+        background-color: #6C8996;
+        border: none;
+        padding: 4px 2px 5px 2px;
+        border-right: 4px solid rgb(91, 108, 139);
+        box-shadow: -1px 1px 3px dimgrey;
+
+
+        .fc-event-inner {
+          position: relative;
+
+          .delete-event {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+          }
+
+          .fc-event-title  {
+            padding: 0 5px;
+            color: dimgrey;
+            background-color: #6C8996;
+          } :hover {
+            background-color: #6C8996;
+          }
+        }
+      }
+    }
+  }
+}

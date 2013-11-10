@@ -6,21 +6,23 @@ FAK::Application.routes.draw do
   resources :links
 
   resources :shows
+
   get 'ticket', to: 'shows#ticket'
+
+  resources :calendar
 
   resources :venues
 
-
   resources :songs
-
 
   resources :albums
 
-
   authenticated :user do
-    root :to => 'shows#ticket'
+    root :to => 'calendar#index'
   end
-  root :to => "shows#ticket"
+
+  root :to => "calendar#index"
+
   devise_for :users
   resources :users
 end
