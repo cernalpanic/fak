@@ -15,7 +15,7 @@ class ShowsController < ApplicationController
   # GET /shows.json
 	def index
 		Show.includes( :links, :songs, :artists, :presses )
-		@shows = Show.all
+		@shows = Show.all.sort_by(&:date).reverse
 
     respond_to do |format|
       format.html # index.html.erb
